@@ -1,6 +1,7 @@
 package com.designpattern.singleton;
 
 public class DoubleCheckedLockingSingleton {
+	
 	DoubleCheckedLockingSingleton doublecheckedSingleton;
 	
 	private DoubleCheckedLockingSingleton() {}

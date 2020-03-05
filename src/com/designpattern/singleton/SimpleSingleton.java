@@ -1,6 +1,7 @@
 package com.designpattern.singleton;
 
 public class SimpleSingleton {
+	
 	SimpleSingleton singletonObject;
 	private SimpleSingleton() {}
 	
