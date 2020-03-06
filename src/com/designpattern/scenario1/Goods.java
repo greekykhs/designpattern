@@ -23,12 +23,12 @@ public abstract class Goods {
 	protected abstract boolean isImported();
 
 	public double getExtendedTax() {
-		BigDecimal tax = taxCalculator.getCalculatedTax(isTaxed(), isImported(), price, quantity);
+		BigDecimal tax = taxCalculator.getCalculatedTax(isSaleTaxable(), isImported(), price, quantity);
 		return tax.doubleValue();
 	}
 
 	public double getExtendedTaxedPrice() {
-		BigDecimal calculatedTax = taxCalculator.getCalculatedTax(isTaxed(), isImported(), price, quantity);
+		BigDecimal calculatedTax = taxCalculator.getCalculatedTax(isSaleTaxable(), isImported(), price, quantity);
 		BigDecimal extPrice = calculatedTax.add(price);
 		return extPrice.doubleValue();
 	}

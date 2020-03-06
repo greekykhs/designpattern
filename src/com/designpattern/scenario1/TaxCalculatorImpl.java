@@ -10,7 +10,8 @@ public class TaxCalculatorImpl implements TaxCalculator {
 	public static final BigDecimal SALES_TAX = BigDecimal.valueOf(0.10); 
     public static final BigDecimal IMPORT_TAX =  BigDecimal.valueOf(0.05);
 	@Override
-	public BigDecimal getCalculatedTax(boolean isSaleTaxable, boolean isImported, BigDecimal price, int quantity) {
+	public BigDecimal getCalculatedTax(boolean isSaleTaxable, boolean isImported, 
+			BigDecimal price, int quantity) {
 		if(price==null)
 			throw new IllegalArgumentException("Price cannot be null");		
 		
